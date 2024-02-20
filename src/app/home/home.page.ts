@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  peso: number = 0;
+  altura: number = 0;
+  imcTotal: number = 0;
+
   constructor() {}
 
+  calcularImc() {
+    console.log('altura:',this.altura)
+    console.log('peso:',this.peso)
+   this.imcTotal = this.peso/(this.altura*this.altura);
+  }
 }
